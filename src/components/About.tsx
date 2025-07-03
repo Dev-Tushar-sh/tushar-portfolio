@@ -51,7 +51,7 @@ const About = () => {
             <div className="relative z-10 overflow-hidden rounded-md w-3/4 md:w-full lg:w-3/4">
               <div className="flex justify-center overflow-hidden rounded-md [filter:drop-shadow(8px_8px_12px_#66d1d1)]">
                 <img
-                  src="/Chibi Tushar.png"
+                  src="Chibi Tushar.png"
                   alt="Tushar Sharma"
                   className="w-full h-auto object-contain"
                 />

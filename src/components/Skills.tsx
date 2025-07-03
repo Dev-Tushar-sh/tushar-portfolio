@@ -30,121 +30,125 @@ const Skills = () => {
   const programmingLanguages = [
     { 
       name: "C++", 
-      logoUrl: "/logos/cpp.svg"
+      logoUrl: "logos/cpp.svg"
     },
     { 
       name: "JavaScript", 
-      logoUrl: "/logos/javascript.svg"
+      logoUrl: "logos/javascript.svg"
     },
     { 
       name: "Python", 
-      logoUrl: "/logos/python.svg"
+      logoUrl: "logos/python.svg"
     },
     { 
       name: "Go", 
-      logoUrl: "/logos/go.svg"
+      logoUrl: "logos/go.svg"
     },
   ];
 
   const csFundamentals = [
     { 
       name: "Data Structures", 
-      logoUrl: "/logos/data-structures.svg"
+      logoUrl: "logos/data-structures.svg"
     },
     { 
       name: "Object Oriented Programming", 
-      logoUrl: "/logos/oop.svg"
+      logoUrl: "logos/oop.svg"
     },
     { 
       name: "Database Management", 
-      logoUrl: "/logos/database.svg"
+      logoUrl: "logos/database.svg"
     },
     { 
       name: "Operating System", 
-      logoUrl: "/logos/linux.svg"
+      logoUrl: "logos/linux.svg"
     },
   ];
 
   const backendSkills = [
     { 
       name: "Node.js", 
-      logoUrl: "/logos/nodejs.svg"
+      logoUrl: "logos/nodejs.svg"
     },
     { 
       name: "Django", 
-      logoUrl: "/logos/django.svg"
+      logoUrl: "logos/django.svg"
     },
     { 
       name: "Flask", 
-      logoUrl: "/logos/flask.svg"
+      logoUrl: "logos/flask.svg"
     },
   ];
 
   const databases = [
     { 
       name: "MongoDB", 
-      logoUrl: "/logos/mongodb.svg"
+      logoUrl: "logos/mongodb.svg"
     },
     { 
       name: "MySQL", 
-      logoUrl: "/logos/mysql.svg"
+      logoUrl: "logos/mysql.svg"
     },
     { 
       name: "PostgreSQL", 
-      logoUrl: "/logos/postgresql.svg"
+      logoUrl: "logos/postgresql.svg"
     },
     { 
       name: "SQLite", 
-      logoUrl: "/logos/sqlite.svg"
+      logoUrl: "logos/sqlite.svg"
     },
     { 
       name: "Elasticsearch", 
-      logoUrl: "/logos/elasticsearch.svg"
+      logoUrl: "logos/elasticsearch.svg"
     },
   ];
 
   const tools = [
     { 
       name: "Git", 
-      logoUrl: "/logos/git.svg"
+      logoUrl: "logos/git.svg"
     },
     { 
       name: "GitHub", 
-      logoUrl: "/logos/github.svg"
+      logoUrl: "logos/github.svg"
     },
     { 
       name: "Postman", 
-      logoUrl: "/logos/postman.svg"
+      logoUrl: "logos/postman.svg"
     },
     { 
       name: "Termius", 
-      logoUrl: "/logos/termius.svg"
+      logoUrl: "logos/termius.svg"
     },
     { 
       name: "VS Code", 
-      logoUrl: "/logos/vscode.svg"
+      logoUrl: "logos/vscode.svg"
     },
   ];
 
   const integrations = [
     { 
       name: "Twilio", 
-      logoUrl: "/logos/twilio.svg"
+      logoUrl: "logos/twilio.svg"
     },
     { 
       name: "Zapier", 
-      logoUrl: "/logos/zapier.svg"
+      logoUrl: "logos/zapier.svg"
+    },
+    { 
+      name: "WebSockets", 
+      logoUrl: "logos/websocket.svg"
     },
   ];
 
   const ml = [
     { 
       name: "OpenAI", 
-      logoUrl: "/logos/openai.svg"
+      logoUrl: "logos/openai.svg"
     },
     { 
       name: "Machine Learning", 
-      logoUrl: "/logos/machine-learning.svg"
+      logoUrl: "logos/machine-learning.svg"
     },
   ];
 
