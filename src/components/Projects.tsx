@@ -162,9 +162,8 @@ const Projects = () => {
         "Admin Panels",
         "Backend Architecture",
       ],
-      githubLink: "",
       demoLink: "",
-      imageSrc: "/fulls/Backend.png",
+      imageSrc: "public/fulls/Backend.png",
     },
     {
       title: "E-Commerce Website",
@@ -180,7 +179,7 @@ const Projects = () => {
         "CSS",
       ],
       githubLink: "https://github.com/Dev-Tushar-sh/TKart-Ecommerce-Website",
-      imageSrc: "/fulls/01.png",
+      imageSrc: "public/fulls/01.png",
     },
     {
       title: "Social Media Platform",
@@ -196,7 +195,7 @@ const Projects = () => {
       ],
       githubLink:
         "https://github.com/Dev-Tushar-sh/CosmoLinks-Social-Media-Website",
-      imageSrc: "/fulls/02.png",
+      imageSrc: "public/fulls/02.png",
     },
     {
       title: "Movie Recommender System",
@@ -204,7 +203,7 @@ const Projects = () => {
         "A content-based recommendation system that suggests movies based on the description and genres of previously liked films. Implemented using machine learning techniques and libraries like Scikit-learn and Pandas. The user interface is built with Streamlit, making it fast to prototype and demo the ML pipeline. This project demonstrates my ability to work with ML models and deploy them via a lightweight web app.",
       technologies: ["Python", "Pandas", "Scikit-learn", "Streamlit", "NLP"],
       githubLink: "https://github.com/Dev-Tushar-sh/Movies-Recommender-System",
-      imageSrc: "/fulls/03.png",
+      imageSrc: "public/fulls/03.png",
     },
     {
       title: "Virtual AI Desktop Assistant (VAIDA)",
@@ -232,7 +231,7 @@ const Projects = () => {
       ],
       githubLink:
         "https://github.com/Dev-Tushar-sh/Virtual-AI-Desktop-Assistant",
-      imageSrc: "/fulls/vaida.png",
+      imageSrc: "public/fulls/vaida.png",
     },
   ];
 
