@@ -6,10 +6,12 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface ProjectProps {
+  subhead:string,
   title: string;
   description: string;
   technologies: string[];
   githubLink: string;
+  demoLink: string;
   imageSrc: string;
   reverse?: boolean;
   index: number;
@@ -17,10 +19,12 @@ interface ProjectProps {
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
+  subhead,
   title,
   description,
   technologies,
   githubLink,
+  demoLink,
   imageSrc,
   reverse = false,
   index,
@@ -93,7 +97,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
           reverse ? "md:col-start-1" : "md:col-start-4"
         )}
       >
-        <p className="text-accent mb-2 text-sm">Featured Project</p>
+        <p className="text-accent mb-2 text-sm">{subhead}</p>
         <h3 className="text-xl font-bold mb-3">{title}</h3>
         <div className="glass-card p-4 rounded-xl mb-4 text-left">
           {formatDescription(description, bulletPoints)}
@@ -109,14 +113,26 @@ const ProjectCard: React.FC<ProjectProps> = ({
           ))}
         </div>
         <div className="flex gap-4">
-          <a
-            href={githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground/70 hover:text-accent transition-colors"
-          >
-            <Github size={20} />
-          </a>
+          {githubLink && (
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/70 hover:text-accent transition-colors"
+            >
+              <Github size={20} />
+            </a>
+          )}
+          {demoLink && (
+            <a 
+              href={demoLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-foreground/70 hover:text-accent transition-colors"
+            >
+              <ArrowUpRight size={20} />
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -126,7 +142,9 @@ const ProjectCard: React.FC<ProjectProps> = ({
 const Projects = () => {
   const projects = [
     {
-      title: "Backend Developer — Current Company",
+      subhead: "Backend Developer @ Weshare",
+      title: "Project Weshare",
+      demoLink: "https://weshare.pro/",
       description:
         "As a backend developer, I led the development of critical features and system integrations.",
       bulletPoints: [
@@ -163,10 +181,39 @@ const Projects = () => {
         "Backend Architecture",
       ],
       // githubLink: "",
-      demoLink: "",
       imageSrc: "fulls/Backend.png",
     },
     {
+      subhead: "Backend Developer @ Weshare",
+      title: "Project Helloauto",
+      demoLink: "https://helloauto.ai/",
+      description:
+        "Developed an AI-powered automation platform that democratizes workflow automation for small and medium enterprises. Using OpenAI Assistant API, the platform interprets natural language requests and automatically generates multi-step automation workflows for data processing and communication.",
+      bulletPoints: [
+        "Built conversational AI system using OpenAI Assistant API with custom instructions and structured outputs.",
+        "Integrated Twilio for SMS, email services, and WhatsApp Business API for unified multi-channel messaging.",
+        "Automated data extraction from Excel, CSV, and Google Sheets with intelligent processing and validation.",
+        "Reduced workflow creation time from hours to minutes through no-code interface and AI-generated automations.",
+      ],
+      technologies: [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Docker",
+        "Twilio",
+        "Zapier",
+        "WABA",
+        "OpenAI API",
+        "AWS",
+        "JavaScript",
+        "Cron Jobs",
+        "Backend Architecture",
+      ],
+      // githubLink: "",
+      imageSrc: "fulls/helloauto.png",
+    },
+    {
+      subhead: "Personal Project",
       title: "E-Commerce Website",
       description:
         "Developed a fully functional e-commerce platform using Django and Python. This project includes essential features like user authentication, shopping cart, and order tracking. It also integrates secure session management and provides a simple, responsive UI built with Bootstrap. The backend is powered by MySQLite, ensuring lightweight yet effective database operations ideal for small-scale deployments.",
@@ -183,6 +230,7 @@ const Projects = () => {
       imageSrc: "fulls/01.png",
     },
     {
+      subhead: "Personal Project",
       title: "Social Media Platform",
       description:
         "Built a mini social media web app that supports features like user registration, following other users, posting content, liking posts, and maintaining a personalized feed. This project was developed using Django and Python with PostgreSQL as the backend. It focuses on implementing relational database concepts and efficient data handling while maintaining user experience with proper session and state management.",
@@ -199,6 +247,7 @@ const Projects = () => {
       imageSrc: "fulls/02.png",
     },
     {
+      subhead: "Personal Project",
       title: "Movie Recommender System",
       description:
         "A content-based recommendation system that suggests movies based on the description and genres of previously liked films. Implemented using machine learning techniques and libraries like Scikit-learn and Pandas. The user interface is built with Streamlit, making it fast to prototype and demo the ML pipeline. This project demonstrates my ability to work with ML models and deploy them via a lightweight web app.",
@@ -207,6 +256,7 @@ const Projects = () => {
       imageSrc: "fulls/03.png",
     },
     {
+      subhead: "Major Project",
       title: "Virtual AI Desktop Assistant (VAIDA)",
       description:
         "Built a Python-powered AI assistant capable of voice-based interaction and multitasking.",
@@ -248,6 +298,8 @@ const Projects = () => {
           {projects.map((project, index) => (
             <ProjectCard
               key={project.title}
+              subhead={project.subhead}
+              demoLink={project.demoLink}
               title={project.title}
               description={project.description}
               technologies={project.technologies}

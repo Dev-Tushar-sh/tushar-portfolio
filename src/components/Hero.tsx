@@ -4,10 +4,36 @@ import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
+  const [displayName, setDisplayName] = useState('');
+  const fullName = 'Tushar Sharma';
   const [isVisible, setIsVisible] = useState(false);
   const [typedText, setTypedText] = useState("");
   const fullText = "I'm a backend developer who builds scalable systems and thrives on solving complex problems with code.";
   
+  useEffect(() => {
+    const chars = 'AB*(#@&$)@(#*$(@#JD)#(@@)(#$*CDEFGHIJK%$^*@(()!&#^^LMNOPQRSTUVWXY/.,Zabcdefghijklm$&*@*(#^^$*(@nopqrstuvwxyz0123456789';
+    let iteration = 0;
+
+    const interval = setInterval(() => {
+      setDisplayName(prev =>
+        fullName
+          .split('')
+          .map((char, i) => {
+            if (i < iteration) return fullName[i];
+            if (char === ' ') return ' ';
+            return chars[Math.floor(Math.random() * chars.length)];
+          })
+          .join('')
+      );
+
+      if (iteration >= fullName.length) clearInterval(interval);
+      iteration += 1 / 3; // speed (lower = slower)
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, []);
+
+
   useEffect(() => {
     setIsVisible(true);
     
@@ -26,13 +52,38 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 px-6">
+      <style>{`
+        @keyframes flicker {
+          0% { opacity: 0; }
+          5% { opacity: 1; }
+          10% { opacity: 0; }
+          15% { opacity: 1; }
+          20% { opacity: 0.3; }
+          25% { opacity: 1; }
+          35% { opacity: 0.2; }
+          45% { opacity: 1; }
+          55% { opacity: 0; }
+          65% { opacity: 1; }
+          75% { opacity: 0.5; }
+          85% { opacity: 1; }
+          100% { opacity: 1; }
+        }
+
+        .flicker-once {
+          animation: flicker 2.3s ease-in-out 1;
+          transition: opacity 0.2s ease-in-out;
+        }
+      `}</style>
       <div className="container mx-auto">
         <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <p className="text-accent mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>Hi, my name is</p>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            Tushar Sharma
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 font-mono">
+            {displayName}
           </h1>
-          <h2 className="text-xl md:text-2xl lg:text-4xl font-bold text-foreground/80 mb-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <h2
+            className="text-xl md:text-2xl lg:text-4xl font-bold text-foreground/80 mb-6 flicker-once"
+            style={{ animationDelay: '0.6s', animationFillMode: 'both' }}
+          >
             I build the logic behind the web<br />
             - APIs, systems, and intelligence.
           </h2>
