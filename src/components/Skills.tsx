@@ -39,11 +39,11 @@ const Skills = () => {
     { 
       name: "Python", 
       logoUrl: "logos/python.svg"
-    },
-    { 
-      name: "Go", 
-      logoUrl: "logos/go.svg"
-    },
+    }
+    // { 
+    //   name: "Go", 
+    //   logoUrl: "logos/go.svg"
+    // },
   ];
 
   const csFundamentals = [
@@ -78,6 +78,10 @@ const Skills = () => {
       name: "Flask", 
       logoUrl: "logos/flask.svg"
     },
+    { 
+      name: "Serverless", 
+      logoUrl: "logos/serverless.svg"
+    },
   ];
 
   const databases = [
@@ -105,6 +109,10 @@ const Skills = () => {
 
   const tools = [
     { 
+      name: "AWS", 
+      logoUrl: "logos/aws.svg"
+    },
+    { 
       name: "Git", 
       logoUrl: "logos/git.svg"
     },
@@ -120,13 +128,21 @@ const Skills = () => {
       name: "Termius", 
       logoUrl: "logos/termius.svg"
     },
-    { 
-      name: "VS Code", 
-      logoUrl: "logos/vscode.svg"
-    },
+    // { 
+    //   name: "VS Code", 
+    //   logoUrl: "logos/vscode.svg"
+    // },
   ];
 
   const integrations = [
+    { 
+      name: "Google APIs", 
+      logoUrl: "logos/google.svg"
+    },
+    { 
+      name: "WebSockets", 
+      logoUrl: "logos/websocket.svg"
+    },
     { 
       name: "Twilio", 
       logoUrl: "logos/twilio.svg"
@@ -136,8 +152,8 @@ const Skills = () => {
       logoUrl: "logos/zapier.svg"
     },
     { 
-      name: "WebSockets", 
-      logoUrl: "logos/websocket.svg"
+      name: "Payload CMS", 
+      logoUrl: "logos/PayloadIcon.svg"
     },
   ];
 
@@ -145,6 +161,10 @@ const Skills = () => {
     { 
       name: "OpenAI", 
       logoUrl: "logos/openai.svg"
+    },
+    { 
+      name: "Google Gemini", 
+      logoUrl: "logos/gemini.svg"
     },
     { 
       name: "Machine Learning", 
